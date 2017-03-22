@@ -1,7 +1,9 @@
-## Convert to Fahrenheit
-Right now the temperature is in kelvin units, using this existing API, make the JSON response give back the temperature in Fahrenheit. 
+Now that we have built a basic weather app, let's go ahead and make it our own! Inside of this repository is the starter code from the beginning of class, go ahead and paste in your own code when you are ready to submit it via pull request.
 
-Check out the API documentation, and scroll to the bottom under "Unit Format" to see how this is done. 
+## Convert to Fahrenheit
+Right now the temperature is in kelvin units, using this existing API, make the JSON response give back the temperature in Fahrenheit.
+
+Check out the API documentation, and scroll to the bottom under "Unit Format" to see how this is done.
 http://openweathermap.org/current
 
 ## Include an icon representing the weather above the city
@@ -30,7 +32,7 @@ Using this CSS flags library below, how can we make it so our weathe app shows a
 https://github.com/lipis/flag-icon-css
 http://flag-icon-css.lip.is/
 
-**Example:** 
+**Example:**
 
 ![add flags](https://content.screencast.com/users/ddunn91/folders/Jing/media/8735906a-dbec-4137-b1d6-12488cde976f/00000050.png)
 
