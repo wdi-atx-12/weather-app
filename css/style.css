@@ -1,1 +1,16 @@
 /* Custom CSS goes here */
+
+body {
+  min-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+img {
+  height: 100px;
+}
+
+.city-error {
+  display: none;
+}
