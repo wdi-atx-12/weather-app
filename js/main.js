@@ -10,10 +10,8 @@ $(function() {
   $('#submit').on('click', (e) => {
     clearVals();
     e.preventDefault();
-    var text = '';
-    text = $temperature.val();
     let $getInput = $('.weather-city').val().trim();
-    var city = $getInput;
+    let city = $getInput;
     city = city.replace(/ /g, "+");
 
     function requestWeatherData() {
@@ -25,7 +23,6 @@ $(function() {
         dataType: 'json',
       })
       .done((response) => {
-        console.log('it worked');
         let values = getWeatherVals(response);
         printToDOM(values);
         
@@ -34,7 +31,6 @@ $(function() {
         console.log('Your shit broke');
       });
     };
-
 
     function getWeatherVals(response) {
       let weatherVals = new Array(3);
@@ -54,12 +50,10 @@ $(function() {
     };
 
     requestWeatherData();
-
-    
   });
 
   function clearVals() {
-    var varArry = [$humidity, $temperature, $description, $weatherImg];
+    let varArry = [$humidity, $temperature, $description, $weatherImg];
     $.each(varArry, function(i , val) {
       $(val)
       .contents()
@@ -70,8 +64,4 @@ $(function() {
 
 
   };
-
-
-
-
 });
