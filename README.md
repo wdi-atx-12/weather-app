@@ -16,7 +16,7 @@ Update your JS so that when a user searches for a city with the form, the page u
 ## Convert to Fahrenheit
 Right now the temperature is in kelvin units, using this existing API, make the JSON response give back the temperature in Fahrenheit.
 
-Check out the API documentation, and scroll to the bottom under "Unit Format" to see how this is done.
+Check out the API documentation, and scroll to the bottom under "Units format" to see how this is done.
 http://openweathermap.org/current
 
 ## Include an icon representing the weather above the city
