@@ -11,6 +11,12 @@ $(function() {
     clearVals();
     e.preventDefault();
     let $getInput = $('.weather-city').val().trim();
+    if ($getInput === ''){
+      $('.city-error').css('display', 'block');
+    }
+    else {
+      $('.city-error').css('display', 'none');
+    }
     let city = $getInput;
     city = city.replace(/ /g, "+");
 
