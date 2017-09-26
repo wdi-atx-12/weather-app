@@ -7,8 +7,12 @@ body {
   height: 100%;
 }
 
+.results-city {
+  height: 150px;
+}
+
 img {
-  height: 100px;
+  height: 150px;
 }
 
 .city-error {
