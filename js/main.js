@@ -31,7 +31,7 @@ function onSuccess(response) {
   response.weather.forEach(w => {
     $('.results-icons-container').append(`<img src="${IMG_URL}${w.icon}.png"></img>`);
   });
-  $('.flag-icon').addClass(`flag-icon-${response.sys.country.toLowerCase()}`);
+  $('.flag-icon').append(`<img src="node_modules/flag-icon-css/flags/4x3/${response.sys.country.toLowerCase()}.svg"></img>`);
   $('.temperature').text(response.main.temp + '° F');
   $('.humidity').text(response.main.humidity + '%');
   $('.description').text(response.weather.map(w => w.description).join(', '));
