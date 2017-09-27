@@ -24,7 +24,6 @@ function onError(request, error) {
 }
 
 function onSuccess(response) {
-  console.log(response);
   $('.error-msg').attr('hidden', '');
   $('.results').removeAttr('hidden');
   $('.results-city').text(response.name);
@@ -32,12 +31,10 @@ function onSuccess(response) {
   response.weather.forEach(w => {
     $('.results-icons-container').append(`<img src="${IMG_URL}${w.icon}.png"></img>`);
   });
-  //$('.results-flag').attr('src', `${}`);
+  $('.flag-icon').addClass(`flag-icon-${response.sys.country.toLowerCase()}`);
   $('.temperature').text(response.main.temp + '° F');
   $('.humidity').text(response.main.humidity + '%');
-  $('.description').text(response.weather.map(w => w.description).join(' '));
-
-  // TODO set country flag
+  $('.description').text(response.weather.map(w => w.description).join(', '));
 }
 
 function getDataSerialized(obj = {}) {
