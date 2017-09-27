@@ -1,1 +1,45 @@
-/* Custom CSS goes here */
+body {
+	background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../yup.jpg');
+}
+
+.title {
+	text-align: center;
+	font-size: 50px;
+	color: #edf3ff;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.temperature-label {
+	font-size: 30px;
+	color: #edf3ff;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.humidity-label {
+	font-size: 30px;
+	color: #edf3ff;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.temperature {
+	font-size: 30px;
+	color: #edf3ff;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.humidity {
+	font-size: 30px;
+	color: #edf3ff;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.description {
+	font-size: 30px;
+	color: #edf3ff;
+	font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.flag {
+	margin: 0 auto;
+	vertical-align: center;
+}
