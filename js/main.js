@@ -2,27 +2,22 @@ console.log('hello');/* Javascript goes here! */
 
 
 $(document).ready(function() {
+  $('.btn-primary').on('click', requestWeatherData);
 
-  requestWeatherData();
 });
 
-function requestWeatherData(){
+function requestWeatherData(event){
   console.log('requesting data');
   //this should request live weather data from api
   //eventually based on what the user types
+    event.preventDefault();
+    var city= $(".weather-city").val();
 
-  $('.btn-primary').on('click', search);
-
-      function search(event){
-      event.preventDefault();
-      $(".weather-city").empty();
-      alert('Before the search');
-    };
 
 $.ajax({
     method: 'GET',
     url:`http://api.openweathermap.org/data/2.5/weather`,
-    data:`q={$(".weather-city").val()}&units=metric&appid=b485267fdf94c954775bbd8f902595a2`,
+    data:`q=${city}&units=metric&appid=b485267fdf94c954775bbd8f902595a2`,
     datatype:'json',
     success: onSuccess,
     error: onError
