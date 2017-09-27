@@ -1,51 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mini Weather App</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </head>
-  <body>
-    <main class="weather-app container">
+<html><head>
+  <meta charset="utf-8">
+  <title>Mini Weather App</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <h1 class="title">Weather</h1>
+    <form class="weather-form">
+      <input type="text" class="weather-city" name="q" value="Austin" placeholder="Enter a city.."/>
+      <input type="hidden" name="appid" value="aa3989364fc6d6e927b44975f37600a9">
+      <!-- james: 3501f282f2cd6fc99583263cfdc07353 -->
+      <!-- mine: aa3989364fc6d6e927b44975f37600a9 -->
+      <input type="hidden" name="units" value="imperial">
 
-      <div class="row form-row">
-        <div class="col-md-4 col-md-offset-4">
-          <h1 class="title">Weather App</h1>
-          <form class="getWeatherData">
-            <input type="text" class="weather-city" placeholder="Enter a city.."/>
-            <input type="submit" value="Get Weather">
-            <p class="city-error" style="display:none;">Whoops! Looks like that city doesn't exist, try another one.</p>
-          </form>
-        </div>
+      <input type="submit" value="Get Weather">
+
+    </form>
+  </header>
+  <section>
+    <p class="city-error" style="display :none;">Whoops! Looks like that city doesn't exist, try another one.</p>
+
+    <article>
+      <div class="info-box">
+        <p>Coordinates</p>
+        <span class="coordinates">
+          <span class="coor-lon"></span>
+          <span class="coor-lat"></span>
+        </span>
       </div>
 
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 results">
-
-          <h2 class="results-city"></h2>
-
-
-          <div class="temperature-container">
-            <span class="temperature-label"><strong>Temperature: </strong></span>
-            <span class="temperature"></span>
-          </div>
-
-          <div class="humidity-container">
-            <span class="humidity-label"><strong>Humidity: </strong></span>
-            <span class="humidity"></span>
-          </div>
-
-          <div class="description-container">
-            <span class="description-label"></span>
-            <span class="description"></span>
-          </div>
-
-        </div>
+      <div class="info-box">
+        <p>Temperature</p>
+        <span class="temperature"></span>
+      </div>
+      <div class="info-box">
+        <p>Temperature Range</p>
+        <span class="temp-range">
+          <span class="temp-min"></span>
+          <span class="temp-max"></span>
+        </span>
       </div>
 
-    </main>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+      <div class="info-box">
+        <p>Humidity</p>
+        <span class="humidity"></span>
+      </div>
+      <div class="info-box">
+        <p>Pressure</p>
+        <span class="pressure"></span>
+      </div>
+      <div class="info-box">
+        <p>Wind</p>
+        <span class="wind">
+          <span class="wind-speed"></span>
+          <span class="wind-deg"></span>
+        </span>
+      </div>
+
+      <div class="info-box">
+        <p>Clouds</p>
+        <span class="clouds"></span>
+      </div>
+
+      <img class="weather-icon" width=50 />
+
+
+      <div class="info-box">
+        <p>Description</p>
+        <span class="description"></span>
+      </div>
+    </article>
+    <article class="country-info">
+      <img class="country-flag" width=50 /> <h2 class="city-name"></h2>
+    </article>
+
+
+
+  </section>
+  <footer>
+  </footer>
+</body></html>
