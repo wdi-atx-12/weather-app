@@ -1,0 +1,15 @@
+/* Custom CSS goes here */
+* {
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Ubuntu';
+}
+.title {
+  font-size: 50px;
+  text-align: center;
+  color: rgba(0, 0, 255, .5);
+}
+#line-rule {
+  border-top: 2px dashed rgba(0, 0, 255, .7);
+  border-bottom: 2px dashed rgba(0, 0, 255, .7);
+}
