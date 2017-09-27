@@ -1,0 +1,25 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "flag-icon-css": "^2.8.0"
+  },
+  "name": "weather-app",
+  "description": "Now that we have built a basic weather app, let's go ahead and make it our own! Inside of this repository is the starter code from the beginning of class, go ahead and paste in your own code when you are ready to submit it via pull request.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludocracy/weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ludocracy/weather-app/issues"
+  },
+  "homepage": "https://github.com/ludocracy/weather-app#readme"
+}

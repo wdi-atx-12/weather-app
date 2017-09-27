@@ -1,1 +1,12 @@
 /* Custom CSS goes here */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.flag-icon img {
+  height: 60px;
+  width: 80px;
+}
