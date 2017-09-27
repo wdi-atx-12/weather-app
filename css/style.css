@@ -1,1 +1,38 @@
 /* Custom CSS goes here */
+body {
+  text-align: center;
+  background-image: url('https://static.pexels.com/photos/125457/pexels-photo-125457.jpeg');
+  background-size: cover;
+}
+
+main {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  margin: 50px auto;
+  color: white;
+  line-height: 1.5;
+  font-size: 115%;
+}
+
+#btn {
+  background: #3B84F9;
+  color: white;
+  height: 30px;
+  width: 110px;
+  border: none;
+  font-weight: 700;
+  text-shadow: none;
+  font-size: 14px;
+}
+
+#btn:hover {
+  background: #5E9AFA;
+}
+
+.weather-city {
+  color: #939393;
+}
+
+h2 .results-city {
+  font-weight: 700 !important;
+}
