@@ -19,7 +19,7 @@ $(function() {
   });
 
 
-  function requestWeatherData(city = 'Austin') {
+  function requestWeatherData(city = 'austin') {
     $.ajax({
       method: 'GET',
       url: `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=imperial`,
@@ -52,7 +52,8 @@ $(function() {
       .filter(function() {
         return this.nodeType === 3;
       }).remove();
+      $('.city-error').css('display', 'none');
     });
   };
-  
+
 });
