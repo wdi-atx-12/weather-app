@@ -1,1 +1,17 @@
 /* Custom CSS goes here */
+
+.flag{
+	width: 100px;
+	height: 100px;
+	display:none;
+	margin: 0 auto;
+}
+.icon{
+	margin: 0 auto;
+}
+.description-label{
+	font-weight: bold;
+}
+.title{
+	font-size: 60px;
+}
