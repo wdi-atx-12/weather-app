@@ -1,1 +1,21 @@
 /* Custom CSS goes here */
+
+body {
+  min-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+.results-city {
+  height: 150px;
+}
+
+#weatherPic {
+  height: 150px;
+}
+
+#flag {
+  margin-top: 30px;
+  height: 40px;
+}
