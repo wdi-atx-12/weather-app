@@ -8,8 +8,10 @@ $(document).ready(function(){
     $('.btn').on('click', function() {
         console.log('clicked thing');
         let input = $('.weather-city').val();
+
         //console.log(input);
         requestWeatherData(input);
+        $('.widget').addClass('appear');
     });
 
 });
@@ -32,7 +34,7 @@ function requestWeatherData(myCity) {
     function onSuccess(json) {
         // todo: code mew
         console.log('success!');
-        console.dir(json.sys.country);
+        console.dir(json.weather[0].description);
 
         $('.city-error').attr('style', 'display:none;');
         let icon = 'http://openweathermap.org/img/w/' + json.weather[0].icon + '.png';
@@ -42,6 +44,7 @@ function requestWeatherData(myCity) {
         $('.humidity').text(json.main.humidity);
         let url = 'flags/1x1/' + json.sys.country + '.svg';
         $('.flag').attr('src', url);
+        $('.description').text(json.weather[0].description);
         // $('.flag').addClass('flag-icon');
         // let flagIcon = 'flag-icon-' + json.sys.country;
         // $('.flag').addClass(flagIcon.toLowerCase());
