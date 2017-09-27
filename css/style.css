@@ -1,1 +1,46 @@
 /* Custom CSS goes here */
+.weather-app{
+  margin:0 auto;
+}
+.results {
+  padding:15px;
+}
+.results-flag{
+  margin:0 auto;
+}
+.title {
+  color:white;
+}
+body {
+font-family:helvetica, san-serif;
+background: linear-gradient(90deg, #04e3aa, #3e5be9);
+background-size: 400% 100%;
+padding:150px;
+text-align:center;
+}
+
+input {
+  font-size:30px;
+  height:60px;
+  text-align:center;
+  box-shadow: inset 2px 2px 2px #04e3aa;
+}
+
+input .submit-btn {
+   padding:4px;
+   width:70px;
+}
+
+input.submit-btn:hover{
+
+   background-color:#000;
+   color:white;
+}
+
+.city-error {
+  font-weight:strong;
+  font-size:25px;
+  padding:35px;
+  margin-top:5px;
+  border:1px solid red;
+}
