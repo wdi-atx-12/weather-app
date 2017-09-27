@@ -5,6 +5,8 @@ $(function() {
   let $humidity = $('.humidity');
   let $description = $('.description');
   let $weatherImg = $('.results-city img');
+  let $cityHeading = $('.results h1');
+  let $flagImg = $('#flag');
   
 
   $('#submit').on('click', (e) => {
@@ -45,6 +47,8 @@ $(function() {
       weatherVals[1] = response.main.humidity;
       weatherVals[2] = response.weather[0].main;
       weatherVals[3] = response.weather[0].icon;
+      weatherVals[4] = response.name;
+      weatherVals[5] = response.sys.country.toLowerCase();
       return weatherVals;
     };
 
@@ -53,13 +57,15 @@ $(function() {
       $humidity.append(`${values[1]} %`);
       $description.append(`${values[2]}`);
       $weatherImg.attr('src', `http://openweathermap.org/img/w/${values[3]}.png`);
+      $cityHeading.append(`${values[4]}`);
+      $flagImg.attr('src', `flags/4x3/${values[5]}.svg`);
     };
-
+    // flag-icon flag-icon-gr
     requestWeatherData();
   });
 
   function clearVals() {
-    let varArry = [$humidity, $temperature, $description, $weatherImg];
+    let varArry = [$humidity, $temperature, $description, $weatherImg, $cityHeading, $flagImg];
     $.each(varArry, function(i , val) {
       $(val)
       .contents()
