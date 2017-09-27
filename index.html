@@ -21,27 +21,24 @@
     </form>
   </header>
   <section>
-    <p class="city-error" style="display :none;">Whoops! Looks like that city doesn't exist, try another one.</p>
-
+    <!-- <p class="city-error" style="display :none;">Whoops! Looks like that city doesn't exist, try another one.</p> -->
+    <article class="weather-info">
+      <img class="weather-icon" width=70 /> <h2 class="description"></h2>
+    </article>
     <article>
       <div class="info-box">
         <p>Coordinates</p>
         <span class="coordinates">
-          <span class="coor-lon"></span>
+          <span class="coor-lon"></span> -
           <span class="coor-lat"></span>
         </span>
       </div>
 
       <div class="info-box">
         <p>Temperature</p>
-        <span class="temperature"></span>
-      </div>
-      <div class="info-box">
-        <p>Temperature Range</p>
-        <span class="temp-range">
-          <span class="temp-min"></span>
-          <span class="temp-max"></span>
-        </span>
+        <span class="temp-min"></span> &gt;
+        <span class="temperature"></span> &gt;
+        <span class="temp-max"></span>
       </div>
 
       <div class="info-box">
@@ -55,7 +52,7 @@
       <div class="info-box">
         <p>Wind</p>
         <span class="wind">
-          <span class="wind-speed"></span>
+          <span class="wind-speed"></span> /
           <span class="wind-deg"></span>
         </span>
       </div>
@@ -65,13 +62,6 @@
         <span class="clouds"></span>
       </div>
 
-      <img class="weather-icon" width=50 />
-
-
-      <div class="info-box">
-        <p>Description</p>
-        <span class="description"></span>
-      </div>
     </article>
     <article class="country-info">
       <img class="country-flag" width=50 /> <h2 class="city-name"></h2>
