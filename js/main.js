@@ -59,7 +59,7 @@ function displayCityAndIcon(data){
 function displayTemp(data){
   var temp = parseFloat(data.main.temp);
   console.log(temp);
-  $('.temperature').append(temp);
+  $('.temperature').append(temp + String.fromCharCode(176) + "F");
 }
 
 function displayHumid(data){
