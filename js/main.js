@@ -8,7 +8,7 @@ function requestWeatherData(e) {
   $.ajax({
     method: 'GET',
     dataType: 'json',
-    data: getDataSerialized({units: 'imperial'}), // TODO add param for fahrenheit temp
+    data: getDataSerialized({units: 'imperial'}),
     url: 'https://api.openweathermap.org/data/2.5/weather',
     success: onSuccess,
     error: onError
@@ -16,12 +16,14 @@ function requestWeatherData(e) {
 }
 
 function onError(request, error) {
-  // TODO
-  console.log(request);
-  console.log(error);
+  $('.error-msg').removeAttr('hidden');
 }
 
 function onSuccess(response) {
+  $('.error-msg').attr('hidden','');
+  $('.results-city').text(response.name);
+  $('.results-icon').append();
+  $('.results-flag').append();
   $('.temperature').text(response.main.temp + '° F');
   $('.humidity').text(response.main.humidity + '%');
   $('.description').text(response.weather.map(w => w.description).join(' '));
