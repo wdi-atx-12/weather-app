@@ -1,4 +1,7 @@
 /* Javascript goes here! */
+const IMG_URL = 'http://openweathermap.org/img/w/';
+const API_URL = 'https://api.openweathermap.org/data/2.5/weather/';
+
 $(function () {
   $('.getWeatherData').submit(requestWeatherData);
 });
@@ -9,7 +12,7 @@ function requestWeatherData(e) {
     method: 'GET',
     dataType: 'json',
     data: getDataSerialized({units: 'imperial'}),
-    url: 'https://api.openweathermap.org/data/2.5/weather',
+    url: API_URL,
     success: onSuccess,
     error: onError
   });
@@ -17,18 +20,23 @@ function requestWeatherData(e) {
 
 function onError(request, error) {
   $('.error-msg').removeAttr('hidden');
+  $('.results').attr('hidden', '');
 }
 
 function onSuccess(response) {
-  $('.error-msg').attr('hidden','');
+  console.log(response);
+  $('.error-msg').attr('hidden', '');
+  $('.results').removeAttr('hidden');
   $('.results-city').text(response.name);
-  $('.results-icon').append();
-  $('.results-flag').append();
+  $('.results-icons-container').empty();
+  response.weather.forEach(w => {
+    $('.results-icons-container').append(`<img src="${IMG_URL}${w.icon}.png"></img>`);
+  });
+  //$('.results-flag').attr('src', `${}`);
   $('.temperature').text(response.main.temp + '° F');
   $('.humidity').text(response.main.humidity + '%');
   $('.description').text(response.weather.map(w => w.description).join(' '));
 
-  // TODO set weather icon
   // TODO set country flag
 }
 
