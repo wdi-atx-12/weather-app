@@ -4,7 +4,7 @@ console.log('is your script running? better go catch it!');
 $(document).ready(function(){
   console.log('ready');
 
-
+//I DONT KNOW WHAT TO DO TO MAKE MY WEBSITE DELETE OLD STUFF ON ENTRY!!!
   $('form').submit(function(event) {
     event.preventDefault();
     // $('.temperature').remove();
@@ -29,8 +29,6 @@ function requestWeatherData(){
 
 function onSuccess(data) {
   console.log('success. proceed.');
-  // console.dir(data.weather[0]);
-  // console.dir(data.weather[0].description);
   displayCityAndIcon(data);
   displayTemp(data);
   displayHumid(data);
