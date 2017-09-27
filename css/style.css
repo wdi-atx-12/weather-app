@@ -1,1 +1,56 @@
 /* Custom CSS goes here */
+body {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 3px;
+}
+
+h1 {
+  padding: 15px;
+  font-size: 200px;
+}
+
+h2 {
+  font-size: 50px;;
+}
+
+form {
+  padding: 15px;
+}
+
+span {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  border: 3px solid #76A0E6;
+  box-shadow: 2px 2px 7px black;
+  width: 80%;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+.weather-city {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.submit-button {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  background-color: #FFA8A8;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #FF7474;
+}
+
+
