@@ -1,1 +1,12 @@
 /* Custom CSS goes here */
+* {
+  text-align: center;
+}
+h3.results-country {
+  margin-top: 10px;
+  padding-right: 15px;
+  letter-spacing: 5px;
+}
+.flagger {
+  width: 9%;
+}
