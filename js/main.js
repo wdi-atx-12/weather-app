@@ -59,12 +59,14 @@ function displayCityAndIcon(data){
 function displayTemp(data){
   var temp = parseFloat(data.main.temp);
   console.log(temp);
+  $('.temperature-container').css('visibility', 'visible');
   $('.temperature').append(temp + String.fromCharCode(176) + "F");
 }
 
 function displayHumid(data){
   var humidity = parseFloat(data.main.humidity);
   console.log(humidity);
+  $('.humidity-container').css('visibility', 'visible');
   $('.humidity').append(humidity + '%');
 }
 

@@ -36,3 +36,7 @@ main {
 h2 .results-city {
   font-weight: 700 !important;
 }
+
+.temperature-container, .humidity-container {
+  visibility: hidden;
+}
