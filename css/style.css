@@ -1,1 +1,21 @@
 /* Custom CSS goes here */
+body{
+  height: 100vh;
+}
+
+.col-md-offset-4{
+  text-align: center;
+}
+
+h1{
+  margin: 35px auto;
+  font-size: 45px;
+}
+
+.row, p{
+  padding: 10px;
+};
+
+main{
+  color: red;
+}
