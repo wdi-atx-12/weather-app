@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
-var myCity = $('.weather-city').val().trim();;
 $('form').submit('click', function(event) {
+
+var myCity = $('.getWeatherData').val().trim();
 
     event.preventDefault();
 
@@ -22,6 +23,7 @@ $('form').submit('click', function(event) {
     var humid = (data.main.humidity);
     $('.temperature').text(Math.round(fahren) + " degrees Fahrenheit");
     $('.humidity').text(humid + '%');
+    myCity = $('.weather-city').val().trim();
   };
 
   function onError () {
