@@ -1,7 +1,6 @@
 /* Custom CSS goes here */
 body {
   text-align: center;
-  background-image: url('https://static.pexels.com/photos/125457/pexels-photo-125457.jpeg');
   background-size: cover;
 }
 
@@ -39,4 +38,21 @@ h2 .results-city {
 
 .temperature-container, .humidity-container {
   visibility: hidden;
+}
+
+.row {
+  /*visibility: hidden;*/
+}
+
+footer, a {
+  color: white;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: none;
 }

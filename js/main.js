@@ -7,9 +7,14 @@ $(document).ready(function(){
 //I DONT KNOW WHAT TO DO TO MAKE MY WEBSITE DELETE OLD STUFF ON ENTRY!!!
   $('form').submit(function(event) {
     event.preventDefault();
-    // $('.temperature').remove();
-    // $('.humidity').remove();
-    // $('.description').remove();
+    $('.results-city').text('');
+    $('.temperature').text('');
+    $('.humidity').text('');
+    $('.description').text('');
+
+    // NOTE: tried using $('.class-name').remove(); to achieve
+    // the same result, but they weren't working properly
+    // need to dig in more
 
     requestWeatherData();
   });
@@ -29,6 +34,7 @@ function requestWeatherData(){
 
 function onSuccess(data) {
   console.log('success. proceed.');
+  $('.city-error').css('display', 'none');
   displayCityAndIcon(data);
   displayTemp(data);
   displayHumid(data);
@@ -74,3 +80,9 @@ function displayDescription(data){
   var description = String(data.weather[0].description);
   $('.description').append('The weather is currently: ' + description + '.');
 }
+
+
+//NOTE: (WIP) this function will eventually change based on the description of the city's weather
+// function changeBackground(){
+//
+// }
