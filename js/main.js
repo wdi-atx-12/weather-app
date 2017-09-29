@@ -54,11 +54,12 @@ function ifInvalidEntry(data){
 // error 403 forbidden for img :'(
 function displayCityAndIcon(data){
   var cityName = String(data.name);
-  var iconID = String(data.weather[0].icon);
-  var img = '<img src="http://openweathermap.org/img/w/" + iconID +".png">';
-  console.log(iconID);
-  console.log(img);
-  $('.icon').append(img);
+  // var iconID = String(data.weather[0].icon);
+  // var img = '<img src="http://openweathermap.org/img/w/" + iconID +".png">';
+  // console.log(iconID);
+  // console.log(img);
+  // $('.icon').append(img);
+  $('.icon').css('visibility', 'visible');
   $('.results-city').append(cityName);
 }
 
