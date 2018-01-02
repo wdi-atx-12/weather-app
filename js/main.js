@@ -26,7 +26,7 @@ function requestWeatherData(myCity) {
     $.ajax({
         method: 'GET',
         //api.openweathermap.org/data/2.5/weather?q={city name}
-        url: 'http://api.openweathermap.org/data/2.5/weather?q=' + myCity + '&APPID=e925dcf3ad4fb0bfe01b0061aad55ae2&units=imperial',
+        url: 'https://api.openweathermap.org/data/2.5/weather?q=' + myCity + '&APPID=e925dcf3ad4fb0bfe01b0061aad55ae2&units=imperial',
         data: '',
         dataType: 'json',
         success: onSuccess,
