@@ -39,13 +39,13 @@ function requestWeatherData(myCity) {
         console.dir(json.weather[0].description);
 
         $('.city-error').attr('style', 'display:none;');
-        let icon = 'http://openweathermap.org/img/w/' + json.weather[0].icon + '.png';
+        let icon = 'https://openweathermap.org/img/w/' + json.weather[0].icon + '.png';
         $('img').attr('src', icon);
         $('img').addClass('appear');
         $('.results-city').text(json.name);
         $('.temperature').text("Temperature: " + json.main.temp);
         $('.humidity').text("Humidity: " + json.main.humidity);
-        let url = 'flags/1x1/' + json.sys.country + '.svg';
+        let url = './flags/1x1/' + json.sys.country + '.svg';
         $('.flag').attr('src', url);
         $('.description').text(json.weather[0].description);
         // $('.flag').addClass('flag-icon');
