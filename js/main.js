@@ -4,14 +4,16 @@ console.log('stuff');
 $(document).ready(function(){
     console.log('I am ready');
     //eventually, this should be tiggered by button
-    requestWeatherData('Austin');
-    $('.btn').on('click', function() {
+    // requestWeatherData('Austin');
+    $('.getWeatherData').on('submit', function(e) {
+        e.preventDefault();
         console.log('clicked thing');
         let input = $('.weather-city').val();
 
         //console.log(input);
+
         requestWeatherData(input);
-        $('.widget').addClass('appear');
+
     });
 
 });
@@ -39,9 +41,10 @@ function requestWeatherData(myCity) {
         $('.city-error').attr('style', 'display:none;');
         let icon = 'http://openweathermap.org/img/w/' + json.weather[0].icon + '.png';
         $('img').attr('src', icon);
+        $('img').addClass('appear');
         $('.results-city').text(json.name);
-        $('.temperature').text(json.main.temp);
-        $('.humidity').text(json.main.humidity);
+        $('.temperature').text("Temperature: " + json.main.temp);
+        $('.humidity').text("Humidity: " + json.main.humidity);
         let url = 'flags/1x1/' + json.sys.country + '.svg';
         $('.flag').attr('src', url);
         $('.description').text(json.weather[0].description);
