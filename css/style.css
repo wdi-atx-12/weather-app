@@ -77,6 +77,7 @@ input {
 
 .widget {
   width: 30%;
+  max-width: 400px;
   margin: 100px auto;
   display: grid;
   grid-template-rows: 1fr 1fr;
