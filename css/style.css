@@ -1,1 +1,116 @@
 /* Custom CSS goes here */
+
+body{
+margin: 0;
+top: 0;
+
+font-family: "Myriad Pro";
+}
+
+h1,h2,h3 {
+    display: inline;
+}
+
+header {
+  border-bottom: 3px solid black;
+  /*background-image: url("../images/header.png");*/
+
+  background-color: lightblue;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex:1;
+  padding: 10px;
+  box-shadow: 3px 3px 5px gray;
+
+
+}
+
+header .title {
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px gray;
+  margin: 0;
+  padding:0;
+
+}
+
+header .weather-form {
+/*
+  */
+  font-size: 16px;
+  /*text-align: center;*/
+  margin-right: 7px;
+  font-weight: bold;
+  /*flex:2;
+  display: flex;
+  flex-direction: column;*/
+}
+
+section {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+article {
+  display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 550px;
+}
+
+.country-info {
+  height: 80px;
+}
+
+article h2 {
+  font-size: 65px;
+  flex: 0;
+}
+
+article .weather-flag {
+  margin-right: 10px;
+  flex:0;
+
+}
+
+
+article .country-flag, article .weather-flag {
+  margin-right: 10px;
+  flex:0;
+
+}
+
+article .info-box {
+  flex-wrap: wrap;
+
+  border: 1px solid black;
+  box-shadow: 2px 2px 4px gray;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-between;
+  background-color: gray;
+
+}
+
+
+
+article .info-box p {
+  font-weight: bold;
+  margin: 0;
+  font-size: 30px;
+
+}
+
+article .info-box span {
+  font-weight: bold;
+  font-size: 20px;
+
+}
