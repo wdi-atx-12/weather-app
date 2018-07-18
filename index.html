@@ -4,44 +4,51 @@
     <meta charset="utf-8">
     <title>Mini Weather App</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/flag-icon.css"> -->
+
   </head>
   <body>
     <main class="weather-app container">
 
-      <div class="row form-row">
-        <div class="col-md-4 col-md-offset-4">
+
+        <header>
           <h1 class="title">Weather App</h1>
           <form class="getWeatherData">
             <input type="text" class="weather-city" placeholder="Enter a city.."/>
-            <input type="submit" value="Get Weather">
+            <button type="submit" name="submit" class="btn">Get Weather</button>
             <p class="city-error" style="display:none;">Whoops! Looks like that city doesn't exist, try another one.</p>
           </form>
-        </div>
-      </div>
+        </header>
 
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4 results">
 
+      <div class="widget">
+        <div class="results">
+          <img class="flag" src="#" alt="flag">
           <h2 class="results-city"></h2>
+        </div>
+        <div class="weather-description">
+          <img src="#" alt="weather icon">
+          <div class="text-description">
+            <div class="temperature-container">
 
+              <span class="temperature"></span>
+            </div>
 
-          <div class="temperature-container">
-            <span class="temperature-label"><strong>Temperature: </strong></span>
-            <span class="temperature"></span>
-          </div>
+            <div class="humidity-container">
 
-          <div class="humidity-container">
-            <span class="humidity-label"><strong>Humidity: </strong></span>
-            <span class="humidity"></span>
-          </div>
+              <span class="humidity"></span>
+            </div>
 
-          <div class="description-container">
-            <span class="description-label"></span>
-            <span class="description"></span>
+            <div class="description-container">
+              <span class="description-label"></span>
+              <span class="description"></span>
+            </div>
           </div>
 
         </div>
+
+
+
       </div>
 
     </main>

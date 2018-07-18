@@ -1,1 +1,115 @@
-/* Custom CSS goes here */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One');
+
+*:focus {
+  outline: none;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poiret One', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.appear {
+  opacity: 1;
+}
+
+img {
+  opacity: 0;
+}
+
+header {
+  font-family: 'Poiret One', cursive;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+form {
+  height: 50px;
+  margin: auto 0;
+  padding-top: 25px;
+}
+
+input {
+  padding: 7px 5px;
+  border-radius: 3px;
+  width: 200px;
+  border: 1px solid #aaa;
+  height: 17px;
+  box-shadow: inset 0px 0px 2px 2px rgba(221,221,221,1);
+}
+
+.btn {
+  letter-spacing: 1px;
+  font-size: .6em;
+  padding: 7px;
+  margin-left: -6px;
+  background-color: #40476D;
+  color: rgba(255,255,255,0.8);
+  font-weight: 400;
+  border: none;
+  box-shadow: 1px 2px #2F3450;
+  max-height: 35px;
+}
+
+.btn:hover {
+  background-color: #2F3450;
+  box-shadow: 0px 2px #40476D;
+}
+
+.flag {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  margin: auto auto;
+}
+
+.widget {
+  width: 30%;
+  max-width: 400px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.results {
+  display: flex;
+  justify-content: space-around;
+}
+
+.results h2 {
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  color: rgba(255,255,255,0.9);
+}
+
+.weather-description {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.text-description {
+  font-size: 1.3em;
+  color: rgba(255,255,255,0.9);
+}
+
+.weather-description img {
+  height: 75px;
+  width: 75px;
+}
